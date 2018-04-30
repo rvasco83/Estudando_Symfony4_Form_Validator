@@ -2,21 +2,21 @@
 
 namespace App\Repository;
 
-use App\Entity\Tecnologia;
+use App\Entity\Tecnologias;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method Tecnologia|null find($id, $lockMode = null, $lockVersion = null)
- * @method Tecnologia|null findOneBy(array $criteria, array $orderBy = null)
- * @method Tecnologia[]    findAll()
- * @method Tecnologia[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Tecnologias|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Tecnologias|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Tecnologias[]    findAll()
+ * @method Tecnologias[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TecnologiaRepository extends ServiceEntityRepository
+class TecnologiasRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Tecnologia::class);
+        parent::__construct($registry, Tecnologias::class);
     }
 
     /*

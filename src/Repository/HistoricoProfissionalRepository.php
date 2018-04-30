@@ -19,31 +19,15 @@ class HistoricoProfissionalRepository extends ServiceEntityRepository
         parent::__construct($registry, HistoricoProfissional::class);
     }
 
-//    /**
-//     * @return HistoricoProfissional[] Returns an array of HistoricoProfissional objects
-//     */
     /*
-    public function findByExampleField($value)
+    public function findBySomething($value)
     {
         return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
-            ->setParameter('val', $value)
+            ->where('h.something = :value')->setParameter('value', $value)
             ->orderBy('h.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?HistoricoProfissional
-    {
-        return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
         ;
     }
     */

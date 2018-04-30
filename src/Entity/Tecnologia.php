@@ -11,8 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Tecnologia
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -25,6 +25,7 @@ class Tecnologia
 
     /**
      * @var Candidato
+     *
      * @ORM\ManyToMany(targetEntity="App\Entity\Candidato", mappedBy="historico")
      */
     private $candidatos;
@@ -38,7 +39,7 @@ class Tecnologia
     }
 
     /**
-     * @return null|string
+     * @return string
      */
     public function getNome()
     {
@@ -52,14 +53,13 @@ class Tecnologia
     public function setNome($nome)
     {
         $this->nome = $nome;
-
         return $this;
     }
 
     /**
      * @return Candidato
      */
-    public function getCandidatos ()
+    public function getCandidatos()
     {
         return $this->candidatos;
     }
@@ -68,7 +68,7 @@ class Tecnologia
      * @param Candidato $candidatos
      * @return Tecnologia
      */
-    public function setCandidatos ($candidatos)
+    public function setCandidatos($candidatos)
     {
         $this->candidatos = $candidatos;
         return $this;

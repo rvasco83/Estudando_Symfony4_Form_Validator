@@ -17,13 +17,13 @@ class CandidatoController extends Controller
      */
     public function index(Request $request)
     {
-         $candidato = new Candidato();
-         $form = $this->createForm(CandidatoType::class, $candidato);
+        $candidato = new Candidato();
+        $form = $this->createForm(CandidatoType::class, $candidato);
 
-         $form->handleRequest($request);
+        $form->handleRequest($request);
 
-         return[
-             'form' => $form->createView(),
-         ];
+        return [
+            'form' => $form->createView()
+        ];
     }
 }

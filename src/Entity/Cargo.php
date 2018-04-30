@@ -11,8 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Cargo
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -32,7 +32,7 @@ class Cargo
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getNome()
     {
@@ -40,13 +40,14 @@ class Cargo
     }
 
     /**
-     * @param $nome
-     * @return $this
+     * @param string $nome
+     * @return Cargo
      */
     public function setNome($nome)
     {
         $this->nome = $nome;
-
         return $this;
     }
+
+
 }

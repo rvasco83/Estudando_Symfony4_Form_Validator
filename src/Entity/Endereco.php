@@ -12,8 +12,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Endereco
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -62,7 +62,7 @@ class Endereco
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getRua()
     {
@@ -70,18 +70,17 @@ class Endereco
     }
 
     /**
-     * @param $rua
-     * @return $this
+     * @param mixed $rua
+     * @return Endereco
      */
     public function setRua($rua)
     {
         $this->rua = $rua;
-
         return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getNumero()
     {
@@ -89,18 +88,17 @@ class Endereco
     }
 
     /**
-     * @param $numero
-     * @return $this
+     * @param mixed $numero
+     * @return Endereco
      */
     public function setNumero($numero)
     {
         $this->numero = $numero;
-
         return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getBairro()
     {
@@ -108,18 +106,17 @@ class Endereco
     }
 
     /**
-     * @param $bairro
-     * @return $this
+     * @param mixed $bairro
+     * @return Endereco
      */
     public function setBairro($bairro)
     {
         $this->bairro = $bairro;
-
         return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getCidade()
     {
@@ -127,18 +124,17 @@ class Endereco
     }
 
     /**
-     * @param $cidade
-     * @return $this
+     * @param mixed $cidade
+     * @return Endereco
      */
     public function setCidade($cidade)
     {
         $this->cidade = $cidade;
-
         return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getEstado()
     {
@@ -146,13 +142,14 @@ class Endereco
     }
 
     /**
-     * @param $estado
-     * @return $this
+     * @param mixed $estado
+     * @return Endereco
      */
     public function setEstado($estado)
     {
         $this->estado = $estado;
-
         return $this;
     }
+
+
 }

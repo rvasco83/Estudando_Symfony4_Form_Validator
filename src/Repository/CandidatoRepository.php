@@ -19,31 +19,15 @@ class CandidatoRepository extends ServiceEntityRepository
         parent::__construct($registry, Candidato::class);
     }
 
-//    /**
-//     * @return Candidato[] Returns an array of Candidato objects
-//     */
     /*
-    public function findByExampleField($value)
+    public function findBySomething($value)
     {
         return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
+            ->where('c.something = :value')->setParameter('value', $value)
             ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Candidato
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
         ;
     }
     */

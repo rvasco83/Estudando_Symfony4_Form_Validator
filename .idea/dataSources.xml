@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="symfony_form_validator@localhost" uuid="25ce8cd4-d5a3-4985-aae6-01e3562f6a4b">
+    <data-source source="LOCAL" name="symfony_form_validator@localhost" uuid="15dd521b-0ad9-43c2-8cde-d9f01667fcdf">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

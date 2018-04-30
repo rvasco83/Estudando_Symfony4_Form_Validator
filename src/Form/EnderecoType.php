@@ -13,31 +13,31 @@ class EnderecoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('rua', TextType::class,[
-                'label' => 'Logadouro',
+            ->add('rua', TextType::class, [
+                'label' => 'Logradouro',
                 'attr' => [
-                    'placeholder' => 'Informe seu logadouro'
+                    'placeholder' => 'Informe seu logradouro'
                 ]
             ])
-            ->add('numero', TextType::class,[
+            ->add('numero', TextType::class, [
                 'label' => 'Número',
                 'attr' => [
                     'placeholder' => 'Informe seu número'
                 ]
             ])
-            ->add('bairro',TextType::class,[
+            ->add('bairro', TextType::class, [
                 'label' => 'Bairro',
                 'attr' => [
                     'placeholder' => 'Informe seu bairro'
                 ]
             ])
-            ->add('cidade',TextType::class,[
+            ->add('cidade', TextType::class, [
                 'label' => 'Cidade',
                 'attr' => [
                     'placeholder' => 'Informe sua cidade'
                 ]
             ])
-            ->add('estado',TextType::class,[
+            ->add('estado', TextType::class, [
                 'label' => 'Estado',
                 'attr' => [
                     'placeholder' => 'Informe seu estado'
@@ -49,6 +49,7 @@ class EnderecoType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
+            // uncomment if you want to bind to a class
             'data_class' => Endereco::class,
         ]);
     }

@@ -6,16 +6,16 @@
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="information_schema"/>
-    <schema id="4" parent="1" name="mysql"/>
-    <schema id="5" parent="1" name="performance_schema"/>
-    <schema id="6" parent="1" name="petshop_son"/>
-    <schema id="7" parent="1" name="symfony4_auth"/>
-    <schema id="8" parent="1" name="sys"/>
-    <schema id="9" parent="1" name="teste"/>
-    <schema id="10" parent="1" name="cad_produto"/>
-    <schema id="11" parent="1" name="gefunc"/>
-    <schema id="12" parent="1" name="novo_symfony"/>
+    <schema id="3" parent="1" name="cad_produto"/>
+    <schema id="4" parent="1" name="gefunc"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="novo_symfony"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="petshop_son"/>
+    <schema id="10" parent="1" name="symfony4_auth"/>
+    <schema id="11" parent="1" name="sys"/>
+    <schema id="12" parent="1" name="teste"/>
     <table id="13" parent="2" name="candidatos"/>
     <table id="14" parent="2" name="candidatos_tecnologias"/>
     <table id="15" parent="2" name="cargos"/>

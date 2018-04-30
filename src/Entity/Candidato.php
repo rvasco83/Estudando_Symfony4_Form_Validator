@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Validator\Constraints as SoNPass;
 
-
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CandidatoRepository")
  * @ORM\Table(name="candidatos")
@@ -14,8 +13,8 @@ use App\Validator\Constraints as SoNPass;
 class Candidato
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -29,6 +28,7 @@ class Candidato
 
     /**
      * @var integer
+     *
      * @ORM\Column(type="integer")
      * @Assert\NotBlank()
      * @Assert\Range(min="0", max="120")
@@ -37,6 +37,7 @@ class Candidato
 
     /**
      * @var string
+     *
      * @ORM\Column(type="string", length=1)
      * @Assert\NotBlank()
      * @Assert\Choice(choices={"M", "F"})
@@ -53,6 +54,7 @@ class Candidato
 
     /**
      * @var float
+     *
      * @ORM\Column(type="decimal", precision=2, length=10)
      * @Assert\NotBlank()
      * @Assert\Range(min="0", max="10000000")
@@ -61,6 +63,7 @@ class Candidato
 
     /**
      * @var string
+     *
      * @ORM\Column(type="string")
      * @Assert\File(mimeTypes={"image/png", "image/jpg"})
      */
@@ -68,6 +71,7 @@ class Candidato
 
     /**
      * @var Cargo
+     *
      * @ORM\ManyToOne(targetEntity="App\Entity\Cargo")
      * @Assert\NotBlank()
      */
@@ -75,7 +79,8 @@ class Candidato
 
     /**
      * @var Endereco
-     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco")
+     *
+     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", cascade={"persist"})
      * @Assert\Valid()
      */
     private $endereco;
@@ -97,27 +102,10 @@ class Candidato
 
     /**
      * @var string
+     *
      * @\App\Validator\SonPass()
      */
     private $palavra_magica;
-
-    /**
-     * @return string
-     */
-    public function getPalavraMagica ()
-    {
-        return $this->palavra_magica;
-    }
-
-    /**
-     * @param string $palavra_magica
-     * @return Candidato
-     */
-    public function setPalavraMagica ($palavra_magica)
-    {
-        $this->palavra_magica = $palavra_magica;
-        return $this;
-    }
 
     /**
      * @return mixed
@@ -136,13 +124,12 @@ class Candidato
     }
 
     /**
-     * @param $nome
-     * @return $this
+     * @param mixed $nome
+     * @return Candidato
      */
     public function setNome($nome)
     {
         $this->nome = $nome;
-
         return $this;
     }
 
@@ -155,13 +142,12 @@ class Candidato
     }
 
     /**
-     * @param $idade
-     * @return $this
+     * @param mixed $idade
+     * @return Candidato
      */
     public function setIdade($idade)
     {
         $this->idade = $idade;
-
         return $this;
     }
 
@@ -174,13 +160,12 @@ class Candidato
     }
 
     /**
-     * @param $sexo
-     * @return $this
+     * @param mixed $sexo
+     * @return Candidato
      */
     public function setSexo($sexo)
     {
         $this->sexo = $sexo;
-
         return $this;
     }
 
@@ -193,13 +178,12 @@ class Candidato
     }
 
     /**
-     * @param $data_nascimento
-     * @return $this
+     * @param mixed $data_nascimento
+     * @return Candidato
      */
     public function setDataNascimento($data_nascimento)
     {
         $this->data_nascimento = $data_nascimento;
-
         return $this;
     }
 
@@ -212,13 +196,12 @@ class Candidato
     }
 
     /**
-     * @param $pretensao_salarial
-     * @return $this
+     * @param mixed $pretensao_salarial
+     * @return Candidato
      */
     public function setPretensaoSalarial($pretensao_salarial)
     {
         $this->pretensao_salarial = $pretensao_salarial;
-
         return $this;
     }
 
@@ -231,20 +214,19 @@ class Candidato
     }
 
     /**
-     * @param $foto
-     * @return $this
+     * @param mixed $foto
+     * @return Candidato
      */
     public function setFoto($foto)
     {
         $this->foto = $foto;
-
         return $this;
     }
 
     /**
      * @return Cargo
      */
-    public function getCargo ()
+    public function getCargo()
     {
         return $this->cargo;
     }
@@ -253,7 +235,7 @@ class Candidato
      * @param Cargo $cargo
      * @return Candidato
      */
-    public function setCargo ($cargo)
+    public function setCargo($cargo)
     {
         $this->cargo = $cargo;
         return $this;
@@ -262,7 +244,7 @@ class Candidato
     /**
      * @return Endereco
      */
-    public function getEndereco ()
+    public function getEndereco()
     {
         return $this->endereco;
     }
@@ -271,7 +253,7 @@ class Candidato
      * @param Endereco $endereco
      * @return Candidato
      */
-    public function setEndereco ($endereco)
+    public function setEndereco($endereco)
     {
         $this->endereco = $endereco;
         return $this;
@@ -280,7 +262,7 @@ class Candidato
     /**
      * @return HistoricoProfissional
      */
-    public function getHistorico ()
+    public function getHistorico()
     {
         return $this->historico;
     }
@@ -289,7 +271,7 @@ class Candidato
      * @param HistoricoProfissional $historico
      * @return Candidato
      */
-    public function setHistorico ($historico)
+    public function setHistorico($historico)
     {
         $this->historico = $historico;
         return $this;
@@ -298,7 +280,7 @@ class Candidato
     /**
      * @return Tecnologia
      */
-    public function getTecnologias ()
+    public function getTecnologias()
     {
         return $this->tecnologias;
     }
@@ -307,10 +289,31 @@ class Candidato
      * @param Tecnologia $tecnologias
      * @return Candidato
      */
-    public function setTecnologias ($tecnologias)
+    public function setTecnologias($tecnologias)
     {
         $this->tecnologias = $tecnologias;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getPalavraMagica()
+    {
+        return $this->palavra_magica;
+    }
+
+    /**
+     * @param string $palavra_magica
+     * @return Candidato
+     */
+    public function setPalavraMagica($palavra_magica)
+    {
+        $this->palavra_magica = $palavra_magica;
+        return $this;
+    }
+
+
+
 
 }

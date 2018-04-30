@@ -18,16 +18,16 @@ class HistoricoProfissionalType extends AbstractType
             ->add('nome_empresa', TextType::class, [
                 'label' => "Empresa"
             ])
-            ->add('data_entrada', DateType::class, [
+            ->add('dataEntrada', DateType::class, [
                 'widget' => 'text',
                 'format' => 'dd/MM/yyyy'
             ])
-            ->add('data_saida', DateType::class, [
+            ->add('dataSaida', DateType::class, [
                 'widget' => 'text',
                 'format' => 'dd/MM/yyyy'
             ])
-            ->add('emprego_atual', CheckboxType::class, [
-                'label' =>  "Emprego Atual"
+            ->add('empregoAtual', CheckboxType::class, [
+                'label' => "Emprego Atual",
             ])
         ;
     }
@@ -35,6 +35,7 @@ class HistoricoProfissionalType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
+            // uncomment if you want to bind to a class
             'data_class' => HistoricoProfissional::class,
         ]);
     }

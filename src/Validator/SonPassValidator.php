@@ -9,7 +9,7 @@ class SonPassValidator extends ConstraintValidator
 {
     public function validate($value, Constraint $constraint)
     {
-        /* @var $constraint \App\Validator\SonPass */
+        /* @var $constraint App\Validator\SonPass */
 
         if($value !== "SoN") {
             $this->context->buildViolation($constraint->message)
